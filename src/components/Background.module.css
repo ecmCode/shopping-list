@@ -1,0 +1,3 @@
+.background{
+    @apply bg-amber-200 h-screen w-screen min-w-full min-h-full
+}
