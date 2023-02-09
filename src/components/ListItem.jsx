@@ -3,7 +3,7 @@ import style from "./ListItem.module.css"
 
 const ListItem = () => {
     return (
-        <div>
+        <div className={style.listItem}>
             List Item
         </div>
     );
