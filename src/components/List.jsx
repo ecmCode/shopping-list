@@ -14,7 +14,7 @@ const List = () => {
             <div className={style.listItems}>
                 {
                     database.map((data, index)=> (
-                        <ListItem key={index} data={data} />
+                        <ListItem key={crypto.randomUUID()} index={index+1} data={data} />
                     ))
                 }
                 

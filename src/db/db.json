@@ -18,11 +18,15 @@
         },
         {
             "item":"cake",
-            "price":10
+            "price":15
         },
         {
             "item":"wine",
             "price":20
+        },
+        {
+            "item":"cheese",
+            "price":15
         }
     ]
 }
