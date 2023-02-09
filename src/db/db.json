@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "item":"milk",
+            "price":4
+        },
+        {
+            "item":"beans",
+            "price":10
+        },
+        {
+            "item":"bananas",
+            "price":6
+        },
+        {
+            "item":"pizza",
+            "price":20
+        },
+        {
+            "item":"cake",
+            "price":10
+        },
+        {
+            "item":"wine",
+            "price":20
+        }
+    ]
+}
