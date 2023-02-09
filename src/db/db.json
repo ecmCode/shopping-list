@@ -2,31 +2,38 @@
     "data": [
         {
             "item":"milk",
-            "price":4
+            "price":4,
+            "complete":true
         },
         {
             "item":"beans",
-            "price":10
+            "price":10,
+            "complete":true
         },
         {
             "item":"bananas",
-            "price":6
+            "price":6,
+            "complete":false
         },
         {
             "item":"pizza",
-            "price":20
+            "price":20,
+            "complete":false
         },
         {
             "item":"cake",
-            "price":15
+            "price":15,
+            "complete":false
         },
         {
             "item":"wine",
-            "price":20
+            "price":20,
+            "complete":false
         },
         {
             "item":"cheese",
-            "price":15
+            "price":15,
+            "complete":false
         }
     ]
 }

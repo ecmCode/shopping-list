@@ -1,3 +1,11 @@
 .listItem{
-    @apply p-2 bg-cyan-300/70 backdrop-blur-sm rounded 
+    @apply p-2 bg-cyan-300/70 backdrop-blur-sm rounded flex justify-between items-center
+}
+
+.data{
+    @apply flex gap-4 items-center
+}
+
+.checkbox{
+    @apply flex
 }
