@@ -1,10 +1,10 @@
 import style from "./ListItem.module.css"
 
 
-const ListItem = () => {
+const ListItem = ({ index, data }) => {
     return (
         <div className={style.listItem}>
-            List Item
+            {index}. {data.item} {data.price}
         </div>
     );
 }
