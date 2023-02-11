@@ -9,7 +9,7 @@ const ListItem = ({ index, data, setData}) => {
     }
 
     const handleDelete = (id) => {
-        console.log(id)  
+        setData((items) => items.filter(i => i.id != id ))
     }
 
     // const handleComplete = (id) => {
@@ -40,7 +40,7 @@ const ListItem = ({ index, data, setData}) => {
                 </span>
                 {index}. {data.item} {data.price}
             </span>
-            <span onClick={() => handleDelete(data)}>
+            <span onClick={() => handleDelete(data.id)}>
                 <FaTrash/>
             </span>
         </div>
