@@ -2,7 +2,7 @@ import style from "./ListItem.module.css"
 import { ImCheckboxUnchecked, ImCheckboxChecked } from 'react-icons/im';
 import { FaTrash } from 'react-icons/fa'
 
-const ListItem = ({ index, data, setDatabase}) => {
+const ListItem = ({ index, data, setData}) => {
     
     const handleComplete = (id) => {
         console.log(id)
@@ -19,13 +19,13 @@ const ListItem = ({ index, data, setDatabase}) => {
     //       }
     //       return data;
     //     })
-    //     setDatabase(updated)
+    //     setData(updated)
         
     //   }
     
     //   const handleDelete = (id) => {
     //     const newDatabase = database.filter((data) => data.id != id)
-    //     setDatabase(newTodo)    
+    //     setData(newTodo)    
     //   }
 
     return (
