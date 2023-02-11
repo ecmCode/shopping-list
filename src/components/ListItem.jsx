@@ -5,33 +5,22 @@ import { FaTrash } from 'react-icons/fa'
 const ListItem = ({ index, data, setData}) => {
     
     const handleComplete = (id) => {
-        console.log(id)
+        setData((items) => items.map(i => {
+            if(i.id == id){
+                i.complete = !i.complete
+            }
+            return i
+        }))
     }
 
     const handleDelete = (id) => {
         setData((items) => items.filter(i => i.id != id ))
     }
 
-    // const handleComplete = (id) => {
-    //     const updated = database.map((data) => {
-    //       if(data.id === id){
-    //         data.complete = !data.complete;
-    //       }
-    //       return data;
-    //     })
-    //     setData(updated)
-        
-    //   }
-    
-    //   const handleDelete = (id) => {
-    //     const newDatabase = database.filter((data) => data.id != id)
-    //     setData(newTodo)    
-    //   }
-
     return (
         <div className={style.listItem}>
             <span className={style.data}>
-                <span className={style.checkbox} onClick={() => handleComplete(data)}>
+                <span className={style.checkbox} onClick={() => handleComplete(data.id)}>
                     {
                         data.complete
                         ? <ImCheckboxChecked/>
