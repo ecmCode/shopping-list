@@ -2,45 +2,34 @@ import style from "./ListItem.module.css"
 import { ImCheckboxUnchecked, ImCheckboxChecked } from 'react-icons/im';
 import { FaTrash } from 'react-icons/fa'
 
-const ListItem = ({ index, data, setDatabase}) => {
+const ListItem = ({ index, data, setData}) => {
     
     const handleComplete = (id) => {
-        console.log(id)
+        setData((items) => items.map(i => {
+            if(i.id == id){
+                i.complete = !i.complete
+            }
+            return i
+        }))
     }
 
     const handleDelete = (id) => {
-        console.log(id)  
+        setData((items) => items.filter(i => i.id != id ))
     }
-
-    // const handleComplete = (id) => {
-    //     const updated = database.map((data) => {
-    //       if(data.id === id){
-    //         data.complete = !data.complete;
-    //       }
-    //       return data;
-    //     })
-    //     setDatabase(updated)
-        
-    //   }
-    
-    //   const handleDelete = (id) => {
-    //     const newDatabase = database.filter((data) => data.id != id)
-    //     setDatabase(newTodo)    
-    //   }
 
     return (
         <div className={style.listItem}>
             <span className={style.data}>
-                <span className={style.checkbox} onClick={() => handleComplete(data)}>
+                <span className={style.checkbox} onClick={() => handleComplete(data.id)}>
                     {
                         data.complete
-                        ? <ImCheckboxChecked/>
+                        ? <ImCheckboxChecked className="text-green-700"/>
                         : <ImCheckboxUnchecked/>
                     }
                 </span>
                 {index}. {data.item} {data.price}
             </span>
-            <span onClick={() => handleDelete(data)}>
+            <span className={style.delete} onClick={() => handleDelete(data.id)}>
                 <FaTrash/>
             </span>
         </div>
