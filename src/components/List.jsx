@@ -2,6 +2,7 @@ import { useState } from "react";
 import db from "../db/db.json";
 import ListItem from "./ListItem";
 import style from "./List.module.css"
+import Footer from "./Footer";
 
 const List = () => {
 
@@ -25,9 +26,8 @@ const List = () => {
                         )}
                     )
                 }
-                
             </div>
-            
+            <Footer data={data}/>
         </div>
      );
 }
