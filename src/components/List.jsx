@@ -13,19 +13,24 @@ const List = () => {
             <div className={style.title}>
                 Shopping list
             </div>
-            <div className={style.listItems}>
-                {
-                    data.map((data, index) => {    
-                        data.id = crypto.randomUUID()
-                        return (
-                            <ListItem 
-                            key={"listitem-" + data.id} 
-                            data={data} 
-                            index={index+1} 
-                            setData={setData}/>
-                        )}
-                    )
-                }
+            <div className={style.container}>
+                <div className={style.listItems}>
+                    {
+                        data.map((data, index) => {    
+                            data.id = crypto.randomUUID()
+                            return (
+                                <ListItem 
+                                key={"listitem-" + data.id} 
+                                data={data} 
+                                index={index+1} 
+                                setData={setData}/>
+                            )}
+                        )
+                    }
+                </div>
+                <div className={style.sidebar}>
+                    Sidebar
+                </div>
             </div>
             <Footer data={data}/>
         </div>
