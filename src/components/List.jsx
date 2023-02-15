@@ -3,6 +3,7 @@ import db from "../db/db.json";
 import ListItem from "./ListItem";
 import style from "./List.module.css"
 import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 
 const List = () => {
 
@@ -28,9 +29,7 @@ const List = () => {
                         )
                     }
                 </div>
-                <div className={style.sidebar}>
-                    Sidebar
-                </div>
+                <Sidebar data={data} setData={setData}/>
             </div>
             <Footer data={data}/>
         </div>
