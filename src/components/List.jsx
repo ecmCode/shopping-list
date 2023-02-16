@@ -17,12 +17,12 @@ const List = () => {
             <div className={style.container}>
                 <div className={style.listItems}>
                     {
-                        data.map((data, index) => {    
-                            data.id = crypto.randomUUID()
+                        data.map((item, index) => {    
+                            item.id = crypto.randomUUID()
                             return (
                                 <ListItem 
-                                key={"listitem-" + data.id} 
-                                data={data} 
+                                key={"listitem-" + item.id} 
+                                data={item} 
                                 index={index+1} 
                                 setData={setData}/>
                             )}
