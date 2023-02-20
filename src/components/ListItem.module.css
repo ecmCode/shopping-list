@@ -3,9 +3,12 @@
 }
 
 .data{
-    @apply flex gap-4 items-center
+    @apply flex gap-4 items-center w-full
 }
 
+.item{
+    @apply flex flex-row justify-between w-full px-4
+}
 .checkbox{
     @apply flex cursor-pointer text-lg text-slate-700 hover:brightness-150 transition
 }
