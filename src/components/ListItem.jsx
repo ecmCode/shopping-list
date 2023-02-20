@@ -19,19 +19,22 @@ const ListItem = ({ index, data, setData}) => {
 
     return (
         <div className={style.listItem}>
-            <span className={style.data}>
-                <span className={style.checkbox} onClick={() => handleComplete(data.id)}>
+            <div className={style.data}>
+                <div className={style.checkbox} onClick={() => handleComplete(data.id)}>
                     {
                         data.complete
                         ? <ImCheckboxChecked className="text-green-700"/>
                         : <ImCheckboxUnchecked/>
                     }
-                </span>
-                {index}. {data.item} {data.price}
-            </span>
-            <span className={style.delete} onClick={() => handleDelete(data.id)}>
+                </div>
+                <div className={style.item}>
+                    <span>{index}. {data.item}</span>
+                    <span className={style.price}>{data.price}</span> 
+                </div>
+            </div>
+            <div className={style.delete} onClick={() => handleDelete(data.id)}>
                 <FaTrash/>
-            </span>
+            </div>
         </div>
     );
 }

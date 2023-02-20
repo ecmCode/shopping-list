@@ -3,13 +3,16 @@
 }
 
 .data{
-    @apply flex gap-4 items-center
+    @apply flex gap-4 items-center w-full
 }
 
+.item{
+    @apply flex flex-row justify-between w-full px-4
+}
 .checkbox{
-    @apply flex cursor-pointer 
+    @apply flex cursor-pointer text-lg text-slate-700 hover:brightness-150 transition
 }
 
 .delete{
-    @apply text-red-500 hover:text-red-400 cursor-pointer transition
+    @apply text-red-500 text-lg hover:brightness-150 cursor-pointer transition
 }

@@ -10,7 +10,7 @@ const Sidebar = ({data, setData}) => {
     const handleAdd = () => {
         if(item.trim() != '' && price.trim() != ''){
             if(Number(price) > 0){
-                setData([...data,{item: item, price: Number(price)}])
+                setData([...data,{item: item, complete:false, price: Number(price)}])
             }
         }
         setItem(null)

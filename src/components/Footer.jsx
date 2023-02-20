@@ -3,14 +3,23 @@ import style from "./Footer.module.css"
 const Footer = ({data}) => {
     return ( 
         <div className={style.footer}>
-            <div>
+            <span>
                 Items: {data.length}
-            </div>
-            <div>
-                Total: {data.reduce((total,item) => {
-                    return total + item.price
-                },0)}
-            </div>
+            </span>
+            <span>
+                Completeted: {
+                    data.reduce((completeItems,item) => {
+                        return completeItems + item.complete
+                    },0)
+                }
+            </span>
+            <span>
+                Total: {
+                    data.reduce((total,item) => {
+                        return total + item.price
+                    },0)
+                }
+            </span>
         </div>
     );
 }
