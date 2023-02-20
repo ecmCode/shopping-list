@@ -21,7 +21,7 @@ const List = () => {
                             item.id = crypto.randomUUID()
                             return (
                                 <ListItem 
-                                key={`listitem-${new Date().getTime()}-${Math.floor(Math.random() * 1000000)}`}
+                                key={`listitem-${Math.floor(Math.random() * 10000)}`}
                                 // key={"listitem-" + item.id} 
                                 data={item} 
                                 index={index+1} 
