@@ -72,7 +72,7 @@ const Sidebar = ({data, setData,filter,setFilter}) => {
                 </button>
             </div>
 
-            <div className={style.btns}>
+            <div className={style.filter}>
                 <button
                 id="all"
                 onClick={(e) => handleFilter(e.target.id)}

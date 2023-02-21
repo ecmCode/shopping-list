@@ -25,3 +25,10 @@
 .clearbtn{
     @apply w-full py-2 rounded bg-rose-300 text-slate-50
 }
+
+.filter{
+    @apply flex gap-4 w-full justify-center items-center 
+}
+.filter button{
+    @apply underline underline-offset-1 w-max
+}
