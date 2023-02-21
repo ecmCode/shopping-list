@@ -1,9 +1,10 @@
 import { useState, useRef } from "react";
 import style from "./Sidebar.module.css"
 
-const Sidebar = ({data, setData}) => {
+const Sidebar = ({data, setData,filter,setFilter}) => {
     const [item,setItem] = useState(null)
     const [price,setPrice] = useState(null)
+
     const inputItemRef = useRef(null);
     const inputPriceRef = useRef(null);
 
@@ -27,6 +28,10 @@ const Sidebar = ({data, setData}) => {
         inputPriceRef.current.value = ''
     }
 
+    const handleFilter = (id) => {
+        setFilter(id)
+    }
+    
     return ( 
         <div className={style.sidebar}>
             <div className={style.input}>
@@ -57,10 +62,35 @@ const Sidebar = ({data, setData}) => {
             <div className={style.btns}>
                 <button 
                 onClick={handleAdd}
-                className={style.addbtn}>Add</button>
+                className={style.addbtn}>
+                    Add
+                </button>
                 <button 
                 onClick={handleClear}
-                className={style.clearbtn}>Clear</button>
+                className={style.clearbtn}>
+                    Clear
+                </button>
+            </div>
+
+            <div className={style.btns}>
+                <button
+                id="all"
+                onClick={(e) => handleFilter(e.target.id)}
+                className={style.filter}>
+                    All
+                </button>
+                <button
+                id="completed" 
+                onClick={(e) => handleFilter(e.target.id)}
+                className={style.filter}>
+                    Completed
+                </button>
+                <button
+                id="pending" 
+                onClick={(e) => handleFilter(e.target.id)}
+                className={style.filter}>
+                    Pending
+                </button>
             </div>
 
         </div>

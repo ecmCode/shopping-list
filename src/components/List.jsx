@@ -8,6 +8,7 @@ import Sidebar from "./Sidebar";
 const List = () => {
 
     const [data,setData] = useState(db.data)
+    const [filter, setFilter] = useState('all')
     
     return ( 
         <div className={style.list}>
@@ -20,17 +21,32 @@ const List = () => {
                         data.map((item, index) => {    
                             item.id = crypto.randomUUID()
                             return (
-                                <ListItem 
-                                key={`listitem-${Math.floor(Math.random() * 10000)}`}
-                                // key={"listitem-" + item.id} 
-                                data={item} 
-                                index={index+1} 
-                                setData={setData}/>
+                                filter !== "all"
+                                
+                                ? filter == 'pending'
+                                    ? !item.complete &&
+                                        <ListItem 
+                                        key={`listitem-${Math.floor(Math.random() * 10000)}`}
+                                        data={item} 
+                                        index={index+1} 
+                                        setData={setData}/>
+                                    : item.complete &&
+                                        <ListItem 
+                                        key={`listitem-${Math.floor(Math.random() * 10000)}`}
+                                        data={item} 
+                                        index={index+1} 
+                                        setData={setData}/>
+                                :
+                                    <ListItem 
+                                    key={`listitem-${Math.floor(Math.random() * 10000)}`}
+                                    data={item} 
+                                    index={index+1} 
+                                    setData={setData}/>
                             )}
                         )
                     }
                 </div>
-                <Sidebar data={data} setData={setData}/>
+                <Sidebar data={data} setData={setData} filter={filter} setFilter={setFilter}/>
             </div>
             <Footer data={data}/>
         </div>
