@@ -7,7 +7,7 @@ const Footer = ({data}) => {
                 Items: {data.length}
             </span>
             <span>
-                Completeted: {
+                Complete: {
                     data.reduce((completeItems,item) => {
                         return completeItems + item.complete
                     },0)
