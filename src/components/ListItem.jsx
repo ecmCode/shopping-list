@@ -29,7 +29,7 @@ const ListItem = ({ index, data, setData}) => {
                 </div>
                 <div className={style.item}>
                     <span>{index}. {data.item}</span>
-                    <span className={style.price}>{data.price}</span> 
+                    <span className={style.price}>$ {data.price}</span> 
                 </div>
             </div>
             <div className={style.delete} onClick={() => handleDelete(data.id)}>
