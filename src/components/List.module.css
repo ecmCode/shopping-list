@@ -1,5 +1,5 @@
 .list{
-    @apply rounded bg-slate-400/30 shadow-inner w-2/3 h-max flex flex-col justify-between
+    @apply rounded bg-slate-400/30 backdrop-blur-sm shadow-inner w-2/3 h-max flex flex-col justify-between
 }
 .title{
     @apply text-3xl bg-cyan-400/70 text-center py-4 rounded
