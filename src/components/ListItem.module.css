@@ -1,5 +1,5 @@
 .listItem{
-    @apply p-4 bg-cyan-300/70 backdrop-blur-sm rounded flex justify-between items-center
+    @apply p-4 bg-gradient-to-tl from-cyan-300/40 to-cyan-300/70 drop-shadow-lg shadow-cyan-800 backdrop-blur-lg rounded flex justify-between items-center
 }
 
 .data{

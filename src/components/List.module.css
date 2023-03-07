@@ -8,7 +8,7 @@
     @apply h-full flex flex-col lg:flex-row 
 }
 .listItems{
-    @apply overflow-y-scroll w-full h-72 lg:h-96 flex flex-col gap-2 py-6 px-10
+    @apply overflow-y-scroll w-full h-72 lg:h-96 flex flex-col gap-3 py-6 px-10
 }
 
 .listItems::-webkit-scrollbar{
